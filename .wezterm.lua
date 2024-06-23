@@ -78,6 +78,16 @@ local config = {
             key = 'i',
             mods = 'CTRL|SHIFT',
             action = action.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' }
+        },
+        {
+            key = '{',
+            mods = 'CTRL|SHIFT',
+            action = action.SwitchWorkspaceRelative(-1)
+        },
+        {
+            key = '}',
+            mods = 'CTRL|SHIFT',
+            action = action.SwitchWorkspaceRelative(1)
         }
     }
 }
