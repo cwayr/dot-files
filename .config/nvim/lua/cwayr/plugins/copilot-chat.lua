@@ -7,11 +7,6 @@ local prompts = {
     FixCode = "Please fix the following code to make it work as intended.",
     FixError = "Please explain the error in the following text and provide a solution.",
     Documentation = "Please provide documentation for the following code.",
-    -- Text related prompts
-    Summarize = "Please summarize the following text.",
-    Spelling = "Please correct any grammar and spelling errors in the following text.",
-    Wording = "Please improve the grammar and wording of the following text.",
-    Concise = "Please rewrite the following text to make it more concise.",
 }
 
 return {
@@ -27,6 +22,11 @@ return {
             answer_header = "## Copilot ",
             error_header = "## Error ",
             separator = " ", -- Separator to use in chat
+            window = {
+                layout = "float",
+                height = 0.7,
+                width = 0.7
+            },
             prompts = prompts,
             auto_follow_cursor = false, -- Don't follow the cursor after getting response
             show_help = false, -- Show help in virtual text, set to true if that's 1st time using Copilot Chat
@@ -97,13 +97,13 @@ return {
             vim.api.nvim_create_user_command("CopilotChatInline", function(args)
                 chat.ask(args.args, {
                     selection = select.visual,
-                    window = {
-                        layout = "float",
-                        relative = "cursor",
-                        width = 1,
-                        height = 0.4,
-                        row = 1,
-                    },
+                    -- window = {
+                    --     layout = "float",
+                    --     relative = "cursor",
+                    --     width = 1,
+                    --     height = 0.4,
+                    --     row = 1,
+                    -- },
                 })
             end, { nargs = "*", range = true })
 

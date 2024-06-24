@@ -24,8 +24,6 @@ return {
             keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
             keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
             keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
-            keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
-            keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
             keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
         end
@@ -91,6 +89,12 @@ return {
 
         -- configure zig language server
         lspconfig["zls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        -- configure c/c++ language server
+        lspconfig["clangd"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
