@@ -19,16 +19,14 @@ return {
     {
         {
             "CopilotC-Nvim/CopilotChat.nvim",
-            branch = "canary",
+            branch = "main",
             dependencies = {
                 { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
                 { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-                { "meanderingprogrammer/render-markdown.nvim" }, -- render copilot md
-                config = function()
-                    require("render-markdown").setup({
-                        file_types = { "markdown", "copilot-chat" },
-                    })
-                end
+                {
+                  "iamcco/markdown-preview.nvim",
+                  ft = { "markdown", "copilot-chat" },
+                }
             },
             opts = {
                 question_header = "# User",
@@ -60,24 +58,6 @@ return {
                         normal = "<C-l>",
                         insert = "<C-l>",
                     },
-                    -- Submit the prompt to Copilot
-                    submit_prompt = {
-                        normal = "<CR>",
-                        insert = "<C-CR>",
-                    },
-                    -- Accept the diff
-                    accept_diff = {
-                        normal = "<C-y>",
-                        insert = "<C-y>",
-                    },
-                    -- Yank the diff in the response to register
-                    yank_diff = {
-                        normal = "gmy",
-                    },
-                    -- Show the diff
-                    show_diff = {
-                        normal = "gmd",
-                    },
                     -- Show the prompt
                     show_info = {
                         normal = "gmp",
@@ -95,7 +75,7 @@ return {
                 opts.selection = select.unnamed
 
                 opts.prompts.CommitStaged = {
-                    prompt = "Write commit message for the change with commitizen convention",
+                    prompt = "Write a commit message for the change with commitizen convention",
                     selection = function(source)
                         return select.gitdiff(source, true)
                     end,
@@ -149,28 +129,12 @@ return {
                     end,
                     desc = "CopilotChat - Ask input",
                 },
-                -- Quick chat with Copilot // selects the entire file
-                {
-                    "<leader>aq",
-                    function()
-                        local input = vim.fn.input("Quick Chat: ")
-                        if input ~= "" then
-                            vim.cmd("CopilotChatBuffer " .. input)
-                        end
-                    end,
-                    desc = "CopilotChat - Quick chat",
-                },
                 -- Generate commit message based on the git diff
                 {
                     "<leader>am",
                     "<cmd>CopilotChatCommitStaged<cr>",
                     desc = "CopilotChat - Generate commit message for staged changes",
                 },
-                -- Debug
-                { "<leader>ad", "<cmd>CopilotChatDebugInfo<cr>", desc = "CopilotChat - Debug Info" },
-                -- Fix the issue with diagnostic
-                { "<leader>af", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix Diagnostic" },
-                -- Toggle Copilot Chat Vsplit
                 { "<leader>av", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Toggle" },
             },
         },

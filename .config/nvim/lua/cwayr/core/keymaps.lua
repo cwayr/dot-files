@@ -10,8 +10,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlight
 
 keymap.set("n", "x", '"_x') -- delete single character without copying into register
 keymap.set("n", "<leader>p", "\"_dP") -- delete text without overwriting copy buffer
-keymap.set({"n", "v"}, "<leader>y", [["+y]]) -- add yanked command to the system clipboard
-keymap.set("n", "<leader>Y", [["+yg_]]) -- add yanked line to the system clipboard
+keymap.set({"n", "v"}, "<leader>y", [["+y]]) -- yank to system clipboard
+keymap.set("n", "<leader>Y", [["+Y]]) -- yank line to system clipboard
+keymap.set({"n", "v"}, "<leader>p", [["+p]]) -- paste from system clipboard
+keymap.set("n", "<leader>P", [["+P]]) -- paste before cursor from system clipboard
 
 -- move lines of text
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
