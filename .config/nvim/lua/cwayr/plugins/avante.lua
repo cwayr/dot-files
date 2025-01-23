@@ -11,5 +11,10 @@ return {
     }
   },
   build = "make",
-  opts = { provider = "copilot" }
+  opts = {
+    provider = "copilot",
+    windows = {
+      width = 35
+    }
+  }
 }

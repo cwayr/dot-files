@@ -69,7 +69,7 @@ local config = {
     font = wezterm.font_with_fallback({ 'BerkeleyMono Nerd Font' }),
     adjust_window_size_when_changing_font_size = false,
     font_size = 12,
-    line_height = 1.2,
+    line_height = 1.1,
 
     -------- colors --------
     color_scheme = 'rose-pine',
