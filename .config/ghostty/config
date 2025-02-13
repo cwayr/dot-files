@@ -1,0 +1,26 @@
+theme                     = dark:rose-pine,light:rose-pine-dawn
+window-theme              = ghostty
+background-opacity        = 0.9
+background-blur           = true
+
+window-decoration         = none
+window-padding-x          = 16
+window-padding-y          = 8
+
+font-family               = BerkeleyMono Nerd Font
+font-size                 = 12
+
+confirm-close-surface     = false
+
+
+keybind                   = global:ctrl+t=new_tab
+keybind                   = global:ctrl+w=ignore
+keybind                   = global:ctrl+w=close_surface
+keybind                   = global:ctrl+shift+s=new_split:auto
+
+keybind                   = global:ctrl+shift+l=goto_split:right
+keybind                   = global:ctrl+shift+k=goto_split:up
+keybind                   = global:ctrl+shift+j=goto_split:down
+keybind                   = global:ctrl+shift+h=goto_split:left
+
+keybind                   = global:ctrl+shift+d=toggle_window_decorations

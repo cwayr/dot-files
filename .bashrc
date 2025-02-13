@@ -125,11 +125,11 @@ export NVM_DIR="$HOME/.nvm"
 export AWS_CLI_AUTO_PROMPT=on-partial
 
 eval "$(starship init bash)"
-eval "$(zoxide init bash)"
 
 alias vim='nvim'
 alias f='fzf'
 alias ghcs='gh copilot suggest'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME '
 
 # sst
 export PATH=/home/cwayr/.sst/bin:$PATH

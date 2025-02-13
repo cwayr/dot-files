@@ -41,7 +41,6 @@ return {
         lspconfig["emmet_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
 
         -- configure python server
@@ -84,7 +83,6 @@ return {
         lspconfig["graphql"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
         })
 
         -- configure zig language server
