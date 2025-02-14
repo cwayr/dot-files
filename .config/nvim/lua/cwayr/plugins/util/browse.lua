@@ -64,14 +64,6 @@ return {
             browse.open_bookmarks({ bookmarks = github, prompt_title = "GitHub Search" })
         end, {})
 
-        command("DevdocsFiletypeSearch", function()
-            browse.devdocs.search_with_filetype()
-        end)
-
-        command("DevdocsSearch", function()
-            browse.devdocs.search()
-        end)
-
         command("Bookmarks", function()
             browse.open_bookmarks({ bookmarks = bookmarks })
         end)
@@ -79,8 +71,6 @@ return {
         -- keymaps
         keymap.set("n", "<leader>gl", ":Google<CR>")
         keymap.set("n", "<leader>gh", ":GitHub<CR>")
-        keymap.set("n", "<leader>dfs", ":DevdocsFiletypeSearch<CR>")
-        keymap.set("n", "<leader>ds", ":DevdocsSearch<CR>")
-        keymap.set("n", "<leader>b", ":Bookmarks<CR>")
+        keymap.set("n", "<leader>bm", ":Bookmarks<CR>")
     end,
 }

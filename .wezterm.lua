@@ -75,7 +75,8 @@ local config = {
     color_scheme = 'rose-pine',
 
     -------- window --------
-    -- window_decorations = 'RESIZE',
+    window_decorations = 'RESIZE',
+    window_background_opacity = 1.0,
     initial_cols = 100,
     initial_rows = 30,
     window_frame = {
@@ -83,8 +84,10 @@ local config = {
         active_titlebar_bg = '#191724',
         inactive_titlebar_bg = '#191724',
         font_size = 12.0,
+        border_left_width = '44px',
+        border_right_width = '44px',
     },
-    window_padding = { left = 20, right = 20, top = 0, bottom = 0 },
+    window_padding = { left = 0, right = 0, top = 60, bottom = 0 },
 
     -------- tab bar --------
     enable_tab_bar = true,

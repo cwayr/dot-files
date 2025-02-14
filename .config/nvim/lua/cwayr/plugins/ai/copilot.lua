@@ -21,7 +21,7 @@ return {
       "CopilotC-Nvim/CopilotChat.nvim",
       branch = "main",
       dependencies = {
-        { "github/copilot.vim" },
+        -- { "github/copilot.vim" },
         { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
         {
           "MeanderingProgrammer/render-markdown.nvim",
