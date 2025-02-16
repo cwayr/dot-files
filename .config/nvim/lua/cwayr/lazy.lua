@@ -23,9 +23,6 @@ require("lazy").setup({
     -- { import = "cwayr.plugins.toggle" }
   },
   {
-  install = {
-    colorscheme = { "rose-pine" },
-  },
   checker = {
     enabled = true,
     notify = false,

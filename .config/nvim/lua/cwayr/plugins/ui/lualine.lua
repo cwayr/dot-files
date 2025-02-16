@@ -7,7 +7,7 @@ return {
 
         lualine.setup({
             options = {
-                theme = "rose-pine"
+                theme = "kanagawa-paper"
             },
             sections = {
                 lualine_x = {

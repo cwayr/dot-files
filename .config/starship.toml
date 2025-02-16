@@ -1,27 +1,27 @@
 format = """\
-[](fg:#31748f)\
-[](fg:#31748f bg:#9ccfd8)\
+[](fg:#223249)\
+[](fg:#223249 bg:#54546D)\
 $time\
-[](fg:#9ccfd8 bg:#ebbcba)\
+[](fg:#54546D bg:#658594)\
 $directory\
-[](fg:#ebbcba bg:#c4a7e7)\
+[](fg:#658594 bg:#E6C384)\
 $git_branch\
 $git_metrics\
-[](fg:#c4a7e7)\
+[](fg:#E6C384)\
 $character\
 """
 
 [directory]
 format = "[ $path ]($style)"
-style = "fg:#42444b bg:#ebbcba"
+style = "fg:#16161D bg:#658594"
 
 [git_branch]
 format = "[ $symbol$branch(:$remote_branch) ]($style)"
-style = "fg:#42444b bg:#c4a7e7"
+style = "fg:#16161D bg:#E6C384"
 
 [git_metrics]
 format = "([+$added]($added_style))[]($added_style)"
-added_style = "fg:#42444b bg:#c4a7e7"
+added_style = "fg:#16161D bg:#E6C384"
 deleted_style = "fg:bright-red bg:235"
 disabled = false
 
@@ -40,5 +40,5 @@ error_symbol = ' ✗ '
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#9ccfd8 fg:#42444b"
+style = "bg:#54546D fg:#16161D"
 format = '[ $time ]($style)'

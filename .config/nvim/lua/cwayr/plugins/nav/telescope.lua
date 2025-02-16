@@ -23,8 +23,9 @@ return {
         layout_config = {
           width = 0.7,
           height = 0.95,
-          preview_height = 0.7
+          preview_height = 0.6
         },
+        file_ignore_patterns = { ".git/" },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
