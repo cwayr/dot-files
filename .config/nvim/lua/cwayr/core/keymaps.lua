@@ -27,6 +27,9 @@ keymap.set("n", "<leader>z", function()
     end
 end)
 
+-- open netrw
+keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
+
 -- keep cursor centered
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")

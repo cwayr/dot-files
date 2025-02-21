@@ -132,3 +132,4 @@ alias ghcs='gh copilot suggest'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME '
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
+. "$HOME/.cargo/env"

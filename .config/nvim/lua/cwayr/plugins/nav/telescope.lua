@@ -35,7 +35,7 @@ return {
       },
     })
 
-    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", { desc = "Fuzzy find files in cwd" })
+    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true no_ignore=false<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find buffers" })

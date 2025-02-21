@@ -14,6 +14,7 @@ return {
           "javascript",
           "typescript",
           "markdown",
+          "markdown_inline",
           "query",
           "json",
           "html",
@@ -26,7 +27,8 @@ return {
           "zig",
           "c"
         },
+        highlight = { enable = true },
       })
     end,
-  },
+  }
 }

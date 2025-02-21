@@ -39,3 +39,6 @@ opt.swapfile = false
 
 -- autosave
 opt.autowrite = true
+
+-- default netrw to tree
+vim.g.netrw_liststyle = 3
