@@ -123,6 +123,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export AWS_CLI_AUTO_PROMPT=on-partial
+export EDITOR=vim
 
 eval "$(starship init bash)"
 
@@ -130,6 +131,7 @@ alias vim='nvim'
 alias f='fzf'
 alias ghcs='gh copilot suggest'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME '
+alias mycmd='zellij run -- mycommand && zellij action switch-mode scroll'
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
 . "$HOME/.cargo/env"
