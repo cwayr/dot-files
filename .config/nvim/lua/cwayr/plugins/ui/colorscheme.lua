@@ -35,6 +35,11 @@ return {
     priority = 1000,
     config = function()
       require("kanagawa-paper").setup({
+        overrides = function(colors)
+          return {
+            Normal = { bg = "#181820" } -- darker bg
+          }
+        end,
         commentStyle = { italic = true },
         functionStyle = {},
         keywordStyle = { italic = true},
@@ -42,27 +47,41 @@ return {
         typeStyle = {},
         transparent = false,
         terminalColors = true,
-        -- overrides = function(colors)
-        --   local theme = colors.theme
-        --   return {
-        --     TelescopeTitle = { fg = theme.ui.special, bold = true },
-        --     TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-        --     TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-        --     TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
-        --     TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-        --     TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-        --     TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
-        --     Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },  -- add `blend = vim.o.pumblend` to enable transparency
-        --     PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
-        --     PmenuSbar = { bg = theme.ui.bg_m1 },
-        --     PmenuThumb = { bg = theme.ui.bg_p2 },
-        --   }
-        -- end,
       })
       vim.cmd([[colorscheme kanagawa-paper]])
     end,
   },
 }
+
+-- return {
+--   {
+--     "dgox16/oldworld.nvim",
+--     priority = 1000,
+--     config = function()
+--       vim.cmd([[colorscheme oldworld]])
+--     end,
+--   },
+-- }
+
+-- return {
+--   {
+--     "ramojus/mellifluous.nvim",
+--     priority = 1000,
+--     config = function()
+--       vim.cmd([[colorscheme mellifluous]])
+--     end,
+--   },
+-- }
+
+-- return {
+--   {
+--     "kdheepak/monochrome.nvim",
+--     priority = 1000,
+--     config = function()
+--       vim.cmd([[colorscheme monochrome]])
+--     end,
+--   },
+-- }
 
 -- return {
 --     {

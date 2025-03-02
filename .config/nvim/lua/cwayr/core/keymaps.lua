@@ -39,6 +39,8 @@ keymap.set("n", "j", "jzz")
 keymap.set("n", "k", "kzz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("v", "j", "jzz")
+keymap.set("v", "k", "kzz")
 
 ------------------- Windows -------------------
 
@@ -48,3 +50,14 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close current split window
 keymap.set("n", "<leader>sn", "<C-w>w") -- go to next split
 keymap.set("n", "<leader>sp", "<C-w>W") -- go to previous split
+
+------------------- Zellij collision remaps -------------------
+
+-- by default, all zellij collisions will change ctrl -> alt
+-- additional plugin changes: harpoon
+
+keymap.set("n", "<A-o>", "<C-o>", { noremap = true }) -- remap ctrl+o -> alt+o
+keymap.set("n", "<C-o>", "<Nop>", { noremap = true }) -- unmap ctrl+o
+
+keymap.set("n", "<A-t>", "<C-t>", { noremap = true }) -- remap ctrl+t -> alt+t
+keymap.set("n", "<C-t>", "<Nop>", { noremap = true }) -- unmap ctrl+t
