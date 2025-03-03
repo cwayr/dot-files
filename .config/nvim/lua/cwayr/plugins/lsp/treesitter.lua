@@ -15,6 +15,7 @@ return {
           "typescript",
           "markdown",
           "markdown_inline",
+          "svelte",
           "query",
           "json",
           "html",

@@ -31,6 +31,7 @@ return {
                 "emmet_ls",
                 "lua_ls",
                 "graphql",
+                "svelte"
             },
             automatic_installation = true, -- not the same as ensure_installed
         })

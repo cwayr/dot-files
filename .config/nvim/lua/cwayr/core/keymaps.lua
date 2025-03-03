@@ -41,6 +41,7 @@ keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 keymap.set("v", "j", "jzz")
 keymap.set("v", "k", "kzz")
+keymap.set("n", "G", "Gzz")
 
 ------------------- Windows -------------------
 
@@ -53,11 +54,11 @@ keymap.set("n", "<leader>sp", "<C-w>W") -- go to previous split
 
 ------------------- Zellij collision remaps -------------------
 
--- by default, all zellij collisions will change ctrl -> alt
+-- by default, all zellij collisions will change ctrl -> ctrl+alt
 -- additional plugin changes: harpoon
 
-keymap.set("n", "<A-o>", "<C-o>", { noremap = true }) -- remap ctrl+o -> alt+o
+keymap.set("n", "<C-A-o>", "<C-o>", { noremap = true }) -- remap ctrl+o -> alt+o
 keymap.set("n", "<C-o>", "<Nop>", { noremap = true }) -- unmap ctrl+o
 
-keymap.set("n", "<A-t>", "<C-t>", { noremap = true }) -- remap ctrl+t -> alt+t
+keymap.set("n", "<C-A-t>", "<C-t>", { noremap = true }) -- remap ctrl+t -> alt+t
 keymap.set("n", "<C-t>", "<Nop>", { noremap = true }) -- unmap ctrl+t
